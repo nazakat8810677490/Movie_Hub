@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Search Result
+{% endblock %}
+
+{% block content %} 
+
+<h1>Search Result</h1>
+
+<div class="movie_container">
+{% if movies %}
+{% for movie in movies %}
+
+<div class="movie_card">
+<h2>{{movie.title}}</h2>
+<p>{{movie.release_date}}</p>
+<p>{{movie.description}}</p>
+<video controls>
+    <source
+    src="{{movie.video_url}}"
+    type="video/mp4"
+    >
+    browser does not support your video
+</video>
+
+<a href="/movies/{{movie._id}}">Watch Movie</a>
+</div>
+{% endfor %}
+
+{% else %}
+<h2>No Movie Found</h2>
+
+{% endif %}
+
+</div>
+
+
+{% endblock %}

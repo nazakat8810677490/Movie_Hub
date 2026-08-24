@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+All Movies
+{% endblock %}
+
+{% block content %}
+
+<h1>All Movies</h1>
+<form action="/search-movie">
+    <input type="text" name="query" placeholder="Search Movie">
+    <button type="submit">🔍</button>
+</form>
+
+<div class="movie_container">
+    {% for movie in movies %}
+    
+    <div class="movie_card movie">
+        <h2>{{movie.title}}</h2>
+        <p>
+            <strong>Release:</strong>
+            {{movie.release_date}}
+        </p>
+        <p>
+            <strong>Category:</strong>
+            {{movie.category}}
+        </p>
+        <p>{{movie.description}}</p>
+
+        <video width="150" controls>
+            <source 
+            src="{{movie.video_url}}"
+            type="video/mp4"
+            >
+            Your browser does not support video
+        </video>
+        {% if role == "admin" %}
+
+        <a href="/delete-movie/{{movie._id}}">
+        <button>Delete</button>
+        </a>
+
+        <a href="/update-movie/{{movie._id}}">
+        <button>Delete</button>
+        </a>
+
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

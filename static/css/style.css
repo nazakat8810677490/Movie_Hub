@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+}
+
+body {
+    background-color: rgb(27, 11, 11);
+    color: white;
+}
+
+nav {
+    height: 50px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-size: 40px;;
+}
+
+nav ul{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+nav ul li a:hover{
+    background: red;
+}
+
+/* -----------------------------hero-section----------------------------- */
+
+.hero-section {
+    height: 400px;
+    background-image: url('/static/images/avenger.webp');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    margin-top: 200px;
+    background: rgba(0,0,0,0,5);
+    padding: 40px;
+    color: white;
+    border-radius: 15px;
+}
+
+/* ----------------------------form-------------------------- */
+.form {
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, textarea, select {
+    gap: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding-left: 10px;
+    border: 2px solid black;
+}
+
+form textarea{
+    height: 80px;
+}
+form #video{
+    width: 200px;
+    padding: 0 0 0 0;
+}
+
+
+form button {
+    background: blue;
+    height: 40px;
+    width: 100px;
+    font-size: large;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.form a{
+    text-decoration: none;
+    font-size: 20px;
+    /* margin-top: 30px; */
+}
+
+
+/* --------------------------- admin-dashboard ------------------------------- */
+h2 {
+    text-align: center;
+    background-color: rgb(27, 11, 11);
+    color: white;
+    padding-top: 30px;
+    font-size: 50px;
+}
+
+.admin-container {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgb(27, 11, 11);
+}
+
+.admin-container .movie {
+    height: 200px;
+    width: 300px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 8px 25px red;   
+}
+
+.admin-container .movie a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------------------------------movies----------------------------- */
+
+.movie_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.movie_card{
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+.movie_card video{
+    height: 100px;
+}
+
+.movie_card h2 {
+    font-size: 20px;
+    text-align:justify;
+    background-color: black;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    height: 100px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    padding-top: 20px;
+}
+
+
+
+
+
